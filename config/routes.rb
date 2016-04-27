@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   resources :articles, except: [:new, :edit] do
-    resources :comments, only: [:index, :create]
+    resources :comments, except: [:new, :edit], shallow: true
   end
-  resources :comments, except: [:new, :edit]
 end
