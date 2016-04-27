@@ -17,7 +17,7 @@ RSpec.describe Comment do
   end
 
   it 'validates the presence of comment\'s content' do
-    expect(Comment.create(content: 'Comment Stuff')).to be_valid
-    expect(Comment.create(content: '')).to be_invalid
+    expect(Comment.create(content: 'Awesome Comment')).to be_valid
+    expect(Comment.create).to be_invalid
   end
 end
